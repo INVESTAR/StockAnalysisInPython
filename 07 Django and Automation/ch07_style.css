@@ -1,0 +1,20 @@
+/* 테이블 데이터와 테이블 헤더에 대한 스타일 지정  */
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* 테이블 행이 짝수 번째일 경우의 색상 지정 */
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+/* 테이블 행에 마우스 커서를 올렸을 때의 색상 지정 */
+table tr:hover {background-color: #ddd;}
+
+/* 테이블 헤더에 대한 스타일 지정 */
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}

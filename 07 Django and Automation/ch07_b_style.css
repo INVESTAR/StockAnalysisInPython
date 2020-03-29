@@ -1,0 +1,34 @@
+/* 테이블 폰트 및 테두리선 설정 */
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+/* 테이블 데이터 및 테이블 헤더 설정 */
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* 테이블 행이 짝수 번째일 때의 색상 지정 */
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+/* 테이블 행 위에 마우스 컬러가 올려졌을 때의 색상 지정 */
+table tr:hover {background-color: #ddd;}
+
+/* 테이블 헤더의 스타일 지정 */
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #4D92AA;
+    text-align: center;
+    color: white;
+}
+
+/* 테이블 데이터의 텍스트 정렬 방식을 지정 */
+table td:nth-child(1){text-align: left;}
+table td:nth-child(2){text-align: center;}
+table td:nth-child(3){text-align: right;}
+table td:nth-child(4){text-align: right;}
+table td:nth-child(5){text-align: right;}
+table td:nth-child(6){text-align: right;}
