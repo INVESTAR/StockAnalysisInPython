@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 
 kospi = pdr.get_data_yahoo('^KS11', '2004-01-04')
 
- 
 window = 252
 peak = kospi['Adj Close'].rolling(window, min_periods=1).max()
 drawdown = kospi['Adj Close']/peak - 1.0
