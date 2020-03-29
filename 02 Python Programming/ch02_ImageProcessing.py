@@ -16,22 +16,22 @@ img.save('src.png')
 
 # 2.8.3 'with ~ as 파일 객체:'로 이미지 파일 복사
 BUF_SIZE = 1024
-with open('src.png', 'rb') as sf, open('dst.png', 'wb') as df:  # ①  
+with open('src.png', 'rb') as sf, open('dst.png', 'wb') as df:
     while True:
-        data = sf.read(BUF_SIZE) # ②
+        data = sf.read(BUF_SIZE) 
         if not data:
-            break # ③
-        df.write(data) # ④
+            break
+        df.write(data)
 
 # 2.8.4 SHA-256으로 파일 복사 검증하기
-sha_src = hashlib.sha256() # ①
+sha_src = hashlib.sha256()
 sha_dst = hashlib.sha256()
 
-with open('src.png', 'rb') as sf, open('dst.png', 'rb') as df: # ②
-    sha_src.update(sf.read()) # ③     
+with open('src.png', 'rb') as sf, open('dst.png', 'rb') as df:
+    sha_src.update(sf.read())  
     sha_dst.update(df.read())
 
-print("src.png's hash : {}".format(sha_src.hexdigest())) # ④
+print("src.png's hash : {}".format(sha_src.hexdigest()))
 print("dsc.png's hash : {}".format(sha_dst.hexdigest()))
 
 # 2.8.5 맷플롯립으로 이미지 가공하기
