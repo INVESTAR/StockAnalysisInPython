@@ -22,7 +22,7 @@ ndays_high = df.high.rolling(window=14, min_periods=1).max()
 ndays_low = df.low.rolling(window=14, min_periods=1).min()
 
 fast_k = (df.close - ndays_low) / (ndays_high - ndays_low) * 100
-slow_d= fast_k.rolling(window=3).mean()
+slow_d = fast_k.rolling(window=3).mean()
 df = df.assign(fast_k=fast_k, slow_d=slow_d).dropna()
 
 plt.figure(figsize=(9, 9))
@@ -34,11 +34,11 @@ p1.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m'))
 plt.plot(df.number, df['ema130'], color='c', label='EMA130')
 for i in range(1, len(df.close)):
     if df.ema130.values[i-1] < df.ema130.values[i] and \
-        df.slow_d.values[i-1] >= 20 and df.slow_d.values[i] < 20:  # ①
-        plt.plot(df.number.values[i], 250000, 'r^')                # ②
+        df.slow_d.values[i-1] >= 20 and df.slow_d.values[i] < 20:
+        plt.plot(df.number.values[i], 250000, 'r^') 
     elif df.ema130.values[i-1] > df.ema130.values[i] and \        
-        df.slow_d.values[i-1] <= 80 and df.slow_d.values[i] > 80:  # ③
-        plt.plot(df.number.values[i], 250000, 'bv')                # ④ 
+        df.slow_d.values[i-1] <= 80 and df.slow_d.values[i] > 80:
+        plt.plot(df.number.values[i], 250000, 'bv') 
 plt.legend(loc='best')
 
 p2 = plt.subplot(3, 1, 2)

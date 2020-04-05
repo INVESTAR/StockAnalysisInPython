@@ -3,7 +3,8 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 from matplotlib import pyplot as plt
 from matplotlib import dates as mdates    
-from mpl_finance import candlestick_ohlc 
+from mpl_finance import candlestick_ohlc
+#from mplfinance.original_flavor import candlestick_ohlc
 from datetime import datetime
 
 url = 'https://finance.naver.com/item/sise_day.nhn?code=068270&page=1'
@@ -29,8 +30,9 @@ ohlc = df[['날짜','시가','고가','저가','종가']]
 
 plt.figure(figsize=(9, 6))
 ax = plt.subplot(1, 1, 1)    
-plt.title('Celltrion (candle stick)')
+plt.title('Celltrion (mpl_finance candle stick)')
 candlestick_ohlc(ax, ohlc.values, width=0.7, colorup='red', colordown='blue') 
-ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d')) 
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
+plt.xticks(rotation=45)
 plt.grid(color='gray', linestyle='--')
 plt.show()
