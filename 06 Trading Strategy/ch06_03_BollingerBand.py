@@ -18,4 +18,4 @@ plt.plot(df.index, df['lower'], 'c--', label = 'Lower band')
 plt.fill_between(df.index, df['upper'], df['lower'], color='0.9')  # ⑧ 
 plt.legend(loc='best')
 plt.title('NAVER Bollinger Band (20 day, 2 std)')
-plt.show(
+plt.show()
