@@ -1,4 +1,3 @@
-#import tensorflow as tf
 from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Dense, LSTM, Dropout
 import numpy as np
@@ -7,9 +6,8 @@ from Investar import Analyzer
 
 mk = Analyzer.MarketDB()
 raw_df = mk.get_daily_price('삼성전자', '2018-05-04', '2020-01-22')
-#raw_df = pdr.get_data_yahoo('018260.KS', start='2014-11-14', end='2019-01-31')
 
-window_size = 10  # window size
+window_size = 10 
 data_size = 5
 
 def MinMaxScaler(data):
