@@ -17,11 +17,11 @@ import win32com.client
 cpStatus = win32com.client.Dispatch('CpUtil.CpCybos')      # 시스템 상태 정보 
 cpTradeUtil = win32com.client.Dispatch('CpTrade.CpTdUtil') # 주문 관련 도구 함수 
 cpCodeMgr = win32com.client.Dispatch('CpUtil.CpStockCode') # 종목코드
-cpStock = win32com.client.Dispatch("DsCbo1.StockMst")      # 주식 종목별 정보
-cpOhlc = win32com.client.Dispatch("CpSysDib.StockChart")   # 시가 고가 저가 종가 정보
-cpBalance = win32com.client.Dispatch("CpTrade.CpTd6033")   # 계좌 정보
-cpCash = win32com.client.Dispatch("CpTrade.CpTdNew5331A")  # 주문 가능 금액 
-cpOrder = win32com.client.Dispatch("CpTrade.CpTd0311")     # 주문
+cpStock = win32com.client.Dispatch('DsCbo1.StockMst')      # 주식 종목별 정보
+cpOhlc = win32com.client.Dispatch('CpSysDib.StockChart')   # 시가 고가 저가 종가 정보
+cpBalance = win32com.client.Dispatch('CpTrade.CpTd6033')   # 계좌 정보
+cpCash = win32com.client.Dispatch('CpTrade.CpTdNew5331A')  # 주문 가능 금액 
+cpOrder = win32com.client.Dispatch('CpTrade.CpTd0311')     # 주문
 
 # CREON Plus 시스템 점검 함수크
 def check_creon_system():
