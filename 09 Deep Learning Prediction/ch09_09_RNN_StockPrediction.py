@@ -13,7 +13,7 @@ window_size = 10  # window size
 data_size = 5
 
 def MinMaxScaler(data):
-    """최소값과 최대값을 이용하여 0 ~ 1 값으로 변환"""
+    """최솟값과 최댓값을 이용하여 0 ~ 1 값으로 변환"""
     numerator = data - np.min(data, 0)
     denominator = np.max(data, 0) - np.min(data, 0)
     # 0으로 나누기 에러가 발생하지 않도록 매우 작은 값(1e-7)을 더해서 나눔
@@ -53,7 +53,7 @@ model.add(Dense(units=1))
 model.summary()
 
 model.compile(optimizer='adam', loss='mean_squared_error')
-model.fit(train_x, train_y, epochs=20, batch_size=10)
+model.fit(train_x, train_y, epochs=60, batch_size=30)
 pred_y = model.predict(test_x)
 
 # Visualising the results
