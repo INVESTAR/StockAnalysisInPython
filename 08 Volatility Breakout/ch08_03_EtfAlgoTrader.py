@@ -9,7 +9,7 @@ from urllib.request import urlopen
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options 
 
-slack = Slacker('xoxb-341411373331-390645946323-wPFYKNbhlgef4bMUiP1CvSyI')
+slack = Slacker('xoxb-341411373331-390645946323-wPFYKNbhlgef4bMUiP1CvSyX')
 def dbgout(message):
     """인자로 받은 문자열을 파이썬 셸과 슬랙으로 동시에 출력한다."""
     print(datetime.now().strftime('[%m/%d %H:%M:%S]'), message)
