@@ -66,6 +66,6 @@ plt.ylabel('stock price')
 plt.legend()
 plt.show()
 
-#raw_df.close[-1] : dfy.close[-1] = x : pred_y[-1]
+# raw_df.close[-1] : dfy.close[-1] = x : pred_y[-1]
 print("Tomorrow's SEC price :", raw_df.close[-1] * pred_y[-1] / dfy.close[-1], 'KRW')
 
