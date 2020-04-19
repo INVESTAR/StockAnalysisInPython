@@ -8,3 +8,4 @@
 
 - 서적에 삽입된 그림의 PPT 원본은 PPT_Materials.pptx 파일에 있습니다.
 
+![Portpolio_optimization](./06_Trading_Strategy/imgs/Portpolio_optimization.jpg)
