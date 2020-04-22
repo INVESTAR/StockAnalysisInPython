@@ -22,10 +22,12 @@ lxml==4.4.2
 Markdown==3.2.1
 matplotlib==3.1.2
 mplfinance==0.12.3a3
+multitasking==0.0.9
 numpy==1.17.4
 oauthlib==3.1.0
 opt-einsum==3.2.0
 pandas==1.0.1
+pandas-datareader==0.8.1
 Pillow==7.0.0
 protobuf==3.11.3
 pyasn1==0.4.8
@@ -50,3 +52,4 @@ termcolor==1.1.0
 urllib3==1.25.7
 Werkzeug==1.0.1
 wrapt==1.12.1
+yfinance==0.1.54
