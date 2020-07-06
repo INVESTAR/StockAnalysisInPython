@@ -110,7 +110,7 @@ class DualMomentum:
 
         # 상대 모멘텀의 종목별 수익률을 구해서 2차원 리스트 형태로 추가
         rows = []
-        columns = ['code', 'company', 'old_price', 'end_date', 'returns']
+        columns = ['code', 'company', 'old_price', 'new_price', 'returns']
         for _, code in enumerate(stockList):            
             sql = f"select close from daily_price "\
                 f"where code='{code}' and date='{start_date}'"
