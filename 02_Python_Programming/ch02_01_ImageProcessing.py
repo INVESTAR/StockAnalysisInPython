@@ -38,7 +38,7 @@ print("dsc.png's hash : {}".format(sha_dst.hexdigest()))
 plt.suptitle('Image Processing', fontsize=18)
 plt.subplot(1, 2, 1) # 1행 2열의 영역에서 첫 번째 영역으로 지정
 plt.title('Original Image')
-plt.imshow(mpimg.imread('src.png') # 원본 파일을 읽어서 이미지로 표시
+plt.imshow(mpimg.imread('src.png')) # 원본 파일을 읽어서 이미지로 표시
 
 plt.subplot(122) # 1행 2열의 영역에서 두 번째 영역으로 지정 
 plt.title('Pseudocolor Image')
