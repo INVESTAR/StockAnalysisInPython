@@ -19,8 +19,8 @@ for i in range(len(df.close)-1):
     else:
         df.NMF.values[i+1] = df.TP.values[i+1] * df.volume.values[i+1]
         df.PMF.values[i+1] = 0
-df['MFR'] = df.PMF.rolling(window=10).sum() /
-    df.NMF.rolling(window=10).sum()
+df['MFR'] = (df.PMF.rolling(window=10).sum() /
+    df.NMF.rolling(window=10).sum())
 df['MFI10'] = 100 - 100 / (1 + df['MFR'])
 df = df[19:]
 
