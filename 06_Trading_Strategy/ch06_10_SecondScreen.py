@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import datetime
 from mpl_finance import candlestick_ohlc
+#from mplfinance.original_flavor import candlestick_ohlc
 import matplotlib.dates as mdates
 from Investar import Analyzer
 
