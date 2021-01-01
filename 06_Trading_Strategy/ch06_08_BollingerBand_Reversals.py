@@ -23,16 +23,26 @@ plt.plot(df.index, df['MA20'], 'k--', label='Moving average 20')
 plt.plot(df.index, df['lower'], 'c--', label ='Lower band')
 plt.fill_between(df.index, df['upper'], df['lower'], color='0.9')
 for i in range(0, len(df.close)):
-    if df.PB.values[i] < 0.05 and df.IIP21.values[i] > 0:   
-        plt.plot(df.index.values[i], df.close.values[i], 'r^')
-    elif df.PB.values[i] > 0.95 and df.IIP21.values[i] < 0: 
-        plt.plot(df.index.values[i], df.close.values[i], 'bv')
-
-
+    if df.PB.values[i] < 0.05 and df.IIP21.values[i] > 0:       # ①
+        plt.plot(df.index.values[i], df.close.values[i], 'r^')  # ②
+    elif df.PB.values[i] > 0.95 and df.IIP21.values[i] < 0:     # ③
+        plt.plot(df.index.values[i], df.close.values[i], 'bv')  # ④
 plt.legend(loc='best')
+
 plt.subplot(3, 1, 2)
 plt.plot(df.index, df['PB'], 'b', label='%b')
 plt.grid(True)
 plt.legend(loc='best')
 
 plt.subplot(3, 1, 3)
+plt.bar(df.index, df['IIP21'], color='g', label='II% 21day')
+for i in range(0, len(df.close)):
+    if df.PB.values[i] < 0.05 and df.IIP21.values[i] > 0:
+        plt.plot(df.index.values[i], 0, 'r^') # ⑤
+    elif df.PB.values[i] > 0.95 and df.IIP21.values[i] < 0:
+        plt.plot(df.index.values[i], 0, 'bv') # ⑥
+plt.grid(True)
+plt.legend(loc='best')
+plt.show()
+
+           
