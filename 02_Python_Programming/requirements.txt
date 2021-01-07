@@ -18,7 +18,7 @@ h5py==2.10.0
 idna==2.8
 Keras-Preprocessing==1.1.0
 kiwisolver==1.1.0
-lxml==4.4.2
+lxml==4.6.2
 Markdown==3.2.1
 matplotlib==3.1.2
 mplfinance==0.12.3a3
