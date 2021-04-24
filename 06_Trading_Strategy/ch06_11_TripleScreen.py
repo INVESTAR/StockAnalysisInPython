@@ -37,7 +37,7 @@ for i in range(1, len(df.close)):
     if df.ema130.values[i-1] < df.ema130.values[i] and \
         df.slow_d.values[i-1] >= 20 and df.slow_d.values[i] < 20:
         plt.plot(df.number.values[i], 250000, 'r^') 
-    elif df.ema130.values[i-1] > df.ema130.values[i] and \        
+    elif df.ema130.values[i-1] > df.ema130.values[i] and \
         df.slow_d.values[i-1] <= 80 and df.slow_d.values[i] > 80:
         plt.plot(df.number.values[i], 250000, 'bv') 
 plt.legend(loc='best')
