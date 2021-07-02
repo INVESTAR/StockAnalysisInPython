@@ -49,13 +49,13 @@ def check_creon_system():
     return True
 
 def get_current_price(code):
-    """인자로 받은 종목의 현재가, 매수호가, 매도호가를 반환한다."""
+    """인자로 받은 종목의 현재가, 매도호가, 매수호가를 반환한다."""
     cpStock.SetInputValue(0, code)  # 종목코드에 대한 가격 정보
     cpStock.BlockRequest()
     item = {}
     item['cur_price'] = cpStock.GetHeaderValue(11)   # 현재가
-    item['ask'] =  cpStock.GetHeaderValue(16)        # 매수호가
-    item['bid'] =  cpStock.GetHeaderValue(17)        # 매도호가    
+    item['ask'] =  cpStock.GetHeaderValue(16)        # 매도호가
+    item['bid'] =  cpStock.GetHeaderValue(17)        # 매호가    
     return item['cur_price'], item['ask'], item['bid']
 
 def get_ohlc(code, qty):
@@ -171,7 +171,7 @@ def buy_etf(code):
         ma5_price = get_movingaverage(code, 5)   # 5일 이동평균가
         ma10_price = get_movingaverage(code, 10) # 10일 이동평균가
         buy_qty = 0        # 매수할 수량 초기화
-        if ask_price > 0:  # 매수호가가 존재하면   
+        if ask_price > 0:  # 매호가가 존재하면   
             buy_qty = buy_amount // ask_price  
         stock_name, stock_qty = get_stock_balance(code)  # 종목명과 보유수량 조회
         #printlog('bought_list:', bought_list, 'len(bought_list):',
