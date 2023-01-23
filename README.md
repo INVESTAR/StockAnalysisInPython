@@ -3,7 +3,7 @@
 
 - 소스 코드는 각 장별 디렉터리에 존재하며, 이미지 파일들은 각 장별로 imgs 디렉터리에 존재합니다.
 
-- 114 페이지 소스코드의 이미지 파일 URL은 http://bit.ly/2JnsHnT → http://bit.ly/3ZZyeXQ로 변경됐습니다.
+- 114 페이지 소스코드의 이미지 파일 URL은 http://bit.ly/2JnsHnT → http://bit.ly/3ZZyeXQ 변경됐습니다.
 
 - 지면 관계 상 싣지 못한 파이썬 내장함수표와 AES-256 암복호화 실습은
 10_Appendix_(Python_Built-in_Functions_and_AES-256_Encryption).pdf 파일을 참고하시기 바랍니다.
