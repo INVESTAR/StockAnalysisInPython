@@ -10,6 +10,45 @@
 
 - 서적에 삽입된 그림의 PPT 원본은 PowerPoint_Materials.pptx 파일에 있습니다.
 
+## 시세조회 DB 업데이트 및 시세조회 API 빠른 사용법
+
+1. Python 설치  
+   ① Win+R키를 눌러서 실행창이 나오면 appwiz.cpl를 입력한 후 '프로그램 변경 및 제거' 창에서 기존에 설치된 Python을 전부 제거  
+   ② https://www.python.org/ftp/python/3.8.1/python-3.8.1-amd64.exe 다운로드  
+   ③ 설치 프로그램을 실행한 후 'Add Python 3.8 to PATH' 체크박스에 체크한 후 'Install Now'로 설치  
+   ④ Python 설치가 완료되면 명령창을 새로 실행해서 python --version 명령으로 Python 3.8.1이 설치됐는지 확인
+2. Python 라이브러리 설치  
+   ① https://github.com/INVESTAR/StockAnalysisInPython/blob/master/02_Python_Programming/requirements.txt 다운로드    
+   ② c:\Users\hwang\Downloads>python -m pip install --upgrade pip  
+   ③ c:\Users\hwang\Downloads>pip install -r requirements.txt    
+3. Investar 데이터베이스 생성 
+   ① https://mariadb.com/downloads/ 접속  
+   ② MariaDB Community -> Windows 64bit -> 10.5.24GA 다운로드해서 실행  
+   ③ 바탕화면에 생성된 HediSQL을 실행한 후 Investar DB를 UTF8_general_ci 로 생성  
+   ④ 쿼리 탭을 클릭해서 테이블 생성 쿼리를 실행  
+     CREATE TABLE IF NOT EXISTS company_info ( 
+    code VARCHAR(20),
+    company VARCHAR(40), 
+    last_update DATE, 
+    PRIMARY KEY (code) 
+);
+CREATE TABLE IF NOT EXISTS daily_price ( 
+    code VARCHAR(20),
+    date DATE,
+    open BIGINT(20),
+    high BIGINT(20),
+    low BIGINT(20),
+    close BIGINT(20),
+    diff BIGINT(20),
+    volume BIGINT(20),
+    PRIMARY KEY (code, date) 
+);  
+5. myPackage 생성 및 API 호출   
+   ① c:\myPackage\Investar 폴더를 생성  
+   ② https://github.com/INVESTAR/StockAnalysisInPython/tree/master/05_Stock_Price_API/Investar 폴더로부터 Analyzer.py, DBUpdaterEx.py, MarketDB.py를 다운로드 받아서 c:\myPackage\Investar 폴더로 복사   
+   ③ c:\myPackage\Investar>python DBUpdaterEx.py 실행해서 데이터베이스를 업데이트  
+   ④ IDLE에서 c:\myPackage\Invesat\Analyzer.py 파일을 실행한 뒤 아래처럼 API 호출  
+   
 ## 네이버 금융의 웹 스크레이핑 차단에 대한 안내
 아래 내용은 2021년 10월 11일에 발행된 5쇄 서적부터 반영되어 있으며,
 기존에 발행된 1쇄~4쇄 서적을 구매하신 분들은 아래 내용을 참고하시기 바랍니다.
