@@ -47,8 +47,10 @@ CREATE TABLE IF NOT EXISTS daily_price (
 5. myPackage 생성 및 API 호출   
    ① c:\myPackage\Investar 폴더를 생성  
    ② https://github.com/INVESTAR/StockAnalysisInPython/tree/master/05_Stock_Price_API/Investar 폴더로부터 Analyzer.py, DBUpdaterEx.py, MarketDB.py를 다운로드 받아서 c:\myPackage\Investar 폴더로 복사   
-   ③ c:\myPackage\Investar>python DBUpdaterEx.py 실행해서 데이터베이스를 업데이트  
-   ④ IDLE에서 c:\myPackage\Invesat\Analyzer.py 파일을 실행한 뒤 아래처럼 API 호출  
+   ③ c:\myPackage\Investar>python DBUpdaterEx.py 실행해서 데이터베이스를 업데이트
+   ![DBUpdaterEx2024-03-03](./05_Stock_Price_API/imgs/DBUpdaterEx2024-03-03.png)  
+   ④ IDLE에서 c:\myPackage\Invesat\Analyzer.py 파일을 실행한 뒤 아래처럼 API 호출
+   ![GetDailyPrice](./05_Stock_Price_API/imgs/GetDailyPrice.png)   
    
 ## 네이버 금융의 웹 스크레이핑 차단에 대한 안내
 아래 내용은 2021년 10월 11일에 발행된 5쇄 서적부터 반영되어 있으며,
