@@ -11,7 +11,8 @@
 - 서적에 삽입된 그림의 PPT 원본은 PowerPoint_Materials.pptx 파일에 있습니다.
 
 ## 시세조회 DB 업데이트 및 시세조회 API 빠른 사용법
-
+책이 출간된지 제법 시간이 흘렀고 파이썬 라이브러리도 변화된 내용이 많아서 
+시세조회 API를 빠르게 사용하고자 하시는 분은 아래처럼 진행하시기 바랍니다. (2024-03-03 기준)  
 1. Python 설치  
    ① Win+R키를 눌러서 실행창이 나오면 appwiz.cpl를 입력한 후 '프로그램 변경 및 제거' 창에서 기존에 설치된 Python을 전부 제거  
    ② https://www.python.org/ftp/python/3.8.1/python-3.8.1-amd64.exe 다운로드  
@@ -24,7 +25,7 @@
 3. Investar 데이터베이스 생성   
    ① https://mariadb.com/downloads/ 접속  
    ② MariaDB Community -> Windows 64bit -> 10.5.24GA 다운로드해서 실행  
-   ③ 바탕화면에 생성된 HediSQL을 실행한 후 Investar DB를 utf8_general_ci 로 생성
+   ③ 바탕화면에 생성된 HediSQL 아이콘을 더블 클릭하여 실행한 후 Investar DB를 utf8_general_ci 로 생성
    ![HeidiSQL](./05_Stock_Price_API/imgs/HeidiSQL.png)   
    ④ 쿼리 탭을 클릭해서 테이블 생성 쿼리를 실행  
      CREATE TABLE IF NOT EXISTS company_info ( 
