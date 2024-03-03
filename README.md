@@ -24,7 +24,8 @@
 3. Investar 데이터베이스 생성   
    ① https://mariadb.com/downloads/ 접속  
    ② MariaDB Community -> Windows 64bit -> 10.5.24GA 다운로드해서 실행  
-   ③ 바탕화면에 생성된 HediSQL을 실행한 후 Investar DB를 UTF8_general_ci 로 생성  
+   ③ 바탕화면에 생성된 HediSQL을 실행한 후 Investar DB를 utf8_general_ci 로 생성
+   ![HeidiSQL](./05_Stock_Price_API/imgs/HeidiSQL.png)   
    ④ 쿼리 탭을 클릭해서 테이블 생성 쿼리를 실행  
      CREATE TABLE IF NOT EXISTS company_info ( 
     code VARCHAR(20),
