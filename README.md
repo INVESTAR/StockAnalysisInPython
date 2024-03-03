@@ -21,7 +21,7 @@
    ① https://github.com/INVESTAR/StockAnalysisInPython/blob/master/02_Python_Programming/requirements.txt 다운로드    
    ② c:\Users\hwang\Downloads>python -m pip install --upgrade pip  
    ③ c:\Users\hwang\Downloads>pip install -r requirements.txt    
-3. Investar 데이터베이스 생성 
+3. Investar 데이터베이스 생성   
    ① https://mariadb.com/downloads/ 접속  
    ② MariaDB Community -> Windows 64bit -> 10.5.24GA 다운로드해서 실행  
    ③ 바탕화면에 생성된 HediSQL을 실행한 후 Investar DB를 UTF8_general_ci 로 생성  
