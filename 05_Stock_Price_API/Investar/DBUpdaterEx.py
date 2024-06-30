@@ -101,6 +101,7 @@ class DBUpdater:
             df = df.rename(columns={'날짜':'date','종가':'close','전일비':'diff'
                 ,'시가':'open','고가':'high','저가':'low','거래량':'volume'})
             df['date'] = df['date'].replace('.', '-')
+            df['diff'] = df['diff'].str.extract(r'(\d+)')
             df = df.dropna()
             df[['close', 'diff', 'open', 'high', 'low', 'volume']] = df[['close',
                 'diff', 'open', 'high', 'low', 'volume']].astype(int)
