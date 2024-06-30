@@ -11,7 +11,7 @@
 - 서적에 삽입된 그림의 PPT 원본은 PowerPoint_Materials.pptx 파일에 있습니다.
 
 ## 네이버 일별시세 전일비 데이터 변경에 따른 DBUpdaterEx 수정 내역
-네이버 일별시세의 전일비 데이터가 기존에는 숫자로만 제공되었으나 전일비 데이터에 상승/하락/보합 등의 문자열이 추가되면서 아래처럼 Exceiption이 발생하여 DB에 업데이트되지 않는 현상이 있었습니다. 
+네이버 일별시세의 전일비 데이터가 기존에는 숫자로만 제공되었으나, 전일비 데이터에 상승/하락/보합 등의 문자열이 추가되면서 아래처럼 Exception이 발생하는 현상이 있었습니다. 
 ![ExceptionOccured_2024-06-30](./05_Stock_Price_API/imgs/ExceptionOccured_2024-06-30.jpg)
 전일비 데이터(diff)에서 문자를 제외하고 숫자만 추출해서 처리하도록 DBUpdaterEx.py 코드를 아래와 같이 수정하였습니다. (2024-06-30 기준)
 ![DBUpdaterEx_2024-06-30](./05_Stock_Price_API/imgs/DBUpdaterEx_2024-06-30.jpg)
