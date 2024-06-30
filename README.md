@@ -10,6 +10,12 @@
 
 - 서적에 삽입된 그림의 PPT 원본은 PowerPoint_Materials.pptx 파일에 있습니다.
 
+## 네이버 일별시세 전일비 데이터 변경에 따른 DBUpdaterEx 수정 내역
+네이버 일별시세의 전일비 데이터가 기존에는 숫자로만 제공되었으나 전일비 데이터에 상승/하락/보합 등의 문자열이 추가되면서 아래처럼 Exceiption이 발생하여 DB에 업데이트되지 않는 현상이 있었습니다. 
+![ExceptionOccured_2024-06-30](./05_Stock_Price_API/imgs/ExceptionOccured_2024-06-30.jpg)
+전일비 데이터(diff)에서 문자를 제외하고 숫자만 추출해서 처리하도록 DBUpdaterEx.py 코드를 아래와 같이 수정하였습니다. (2024-06-30 기준)
+![DBUpdaterEx_2024-06-30](./05_Stock_Price_API/imgs/DBUpdaterEx_2024-06-30.jpg)
+
 ## 시세조회 DB 업데이트 및 시세조회 API 빠른 사용법
 책이 출간된지 제법 시간이 흘렀고 파이썬 라이브러리에도 변경된 내용이 많아서 최신 라이브러리 간 호환성이 확보되지 않을 수 있습니다. 시세조회 DB를 빠르게 구축해서 시세조회 API를 사용하고자 하시는 분은 아래처럼 requirements.txt에 명시된 라이브러리 버전으로 설치하시 바랍니다. (2024-03-03 기준)  
 1. Python 설치  
