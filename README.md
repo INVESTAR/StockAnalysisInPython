@@ -15,7 +15,6 @@
 ![ExceptionOccured_2024-06-30](./05_Stock_Price_API/imgs/ExceptionOccured_2024-06-30.jpg)
 
 전일비 데이터(diff)에서 문자를 제외하고 숫자만 추출하도록 DBUpdaterEx.py에 아래처럼 코드 한 줄을 추가하였습니다. (2024-06-30 기준)
-
 ![DBUpdaterEx_2024-06-30](./05_Stock_Price_API/imgs/DBUpdaterEx_2024-06-30.jpg)
 
 ## 시세조회 DB 업데이트 및 시세조회 API 빠른 사용법
