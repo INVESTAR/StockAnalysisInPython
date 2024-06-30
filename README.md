@@ -14,7 +14,7 @@
 네이버 일별시세의 전일비 데이터가 기존에는 숫자로만 제공되었으나, 전일비 데이터에 상승/하락/보합 등의 문자열이 추가되면서 아래처럼 Exception이 발생하는 현상이 있었습니다.
 ![ExceptionOccured_2024-06-30](./05_Stock_Price_API/imgs/ExceptionOccured_2024-06-30.jpg)
 
-전일비 데이터(diff)에서 문자를 제외하고 숫자만 추출해서 처리하도록 DBUpdaterEx.py에 아래처럼 코드 한 줄을 추가하였습니다. (2024-06-30 기준)
+전일비 데이터(diff)에서 문자를 제외하고 숫자만 추출하도록 DBUpdaterEx.py에 아래처럼 코드 한 줄을 추가하였습니다. (2024-06-30 기준)
 
 ![DBUpdaterEx_2024-06-30](./05_Stock_Price_API/imgs/DBUpdaterEx_2024-06-30.jpg)
 
